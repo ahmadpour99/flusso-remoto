@@ -1,0 +1,237 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, .h1, .h2, .h3{
+    font-family: 'Electrolize', sans-serif;
+}
+
+/* Variabili */
+:root{
+    /* Le variabili in CSS sono esattamente come delle proprietá, quindi una coppia di chiave-valore. */
+    --bl: rgb(0, 82, 255);
+    --lb: rgb(216, 249, 255);
+    --w: rgb(247, 247, 247);
+}
+
+body{
+    background-color: var(--lb);
+    color: var(--bl);
+}
+
+.bg-bl{
+    background-color: var(--bl);
+}
+
+.bg-lb{
+    background-color: var(--lb);
+}
+
+.bg-w{
+    background-color: var(--w);
+}
+
+.text-bl{
+    color: var(--bl);
+}
+
+.text-lb{
+    color: var(--lb);
+}
+
+.text-w{
+    color: var(--w);
+}
+
+.border-w{
+    border: 2px solid var(--w);
+}
+
+.border-bl{
+    border: 2px solid var(--bl);
+}
+
+/* Header */
+
+.header-custom{
+    height: 92vh;
+    background-image: linear-gradient(rgba(0, 82, 255, 0.3), rgba(0, 82, 255, 0.3)) ,url(https://picsum.photos/2000);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Navbar */
+
+.navbar{
+    min-height: 8vh;
+}
+
+.nav-link{
+    color: var(--w);
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: var(--w);
+}
+
+.logo{
+    width: 50px;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+/* Icons */
+
+.linea{
+    height: 5px;
+    background-color: var(--bl);
+    width: 60%;
+    position: relative;
+}
+
+.linea::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--w);
+    border: 2px solid var(--bl);
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+}
+
+/* Timeline */
+.bor-left{
+    border-left: 2px solid var(--bl);
+}
+
+.bor-right{
+    border-right: 2px solid var(--bl);
+}
+
+/*
+.pallino{
+    position: relative;
+}
+
+.pallino::after{
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--w);
+    border: 2px solid var(--bl);
+    position: absolute;
+    top: 0px;
+    left: -23px;
+}
+    */
+
+.pallino-r{
+    position: relative;
+}
+
+.pallino-r::after{
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--w);
+    border: 2px solid var(--bl);
+    position: absolute;
+    top: 0px;
+    right: -24px;
+}
+
+.pallino-l{
+    position: relative;
+}
+
+.pallino-l::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--w);
+    border: 2px solid var(--bl);
+    position: absolute;
+    top: 0px;
+    left: -24px;
+}
+
+/* Buttons */
+
+.button-custom{
+    height: 70px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    position: relative;
+}
+
+.top-left{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 2px solid var(--w);
+    border-left: 2px solid var(--w);
+}
+
+.top-right{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 2px solid var(--w);
+    border-right: 2px solid var(--w);
+}
+
+.bottom-right{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--w);
+    border-right: 2px solid var(--w);
+}
+
+.bottom-left{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid var(--w);
+    border-left: 2px solid var(--w);
+}
+
+/* Positioned */
+
+.col-left{
+    position: relative;
+    top: -30px;
+    left: 30px;
+    background-color: var(--lb);
+    transition: 0.5s;
+}
+
+.col-left:hover{
+    top: 0px;
+    left: 0px;
+}
+
+@media screen and (max-width: 600px){
+    .col-left{
+        position: static;
+    }
+}
